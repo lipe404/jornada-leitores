@@ -1,0 +1,848 @@
+[
+  {
+    "id": 1,
+    "titulo": "A metamorfose",
+    "autor": "Franz Kafka",
+    "ano_publicacao": 1915,
+    "pais": "Áustria-Hungria",
+    "local": "Praga",
+    "colecao": ["Clube Principal", "VPLN"]
+  },
+  {
+    "id": 2,
+    "titulo": "Extraordinário",
+    "autor": "R. J. Palacio",
+    "ano_publicacao": 2012,
+    "pais": "Estados Unidos",
+    "local": "Nova York",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 3,
+    "titulo": "Alice no País das Maravilhas",
+    "autor": "Lewis Carroll",
+    "ano_publicacao": 1865,
+    "pais": "Reino Unido",
+    "local": "Inglaterra (ficcional)",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 4,
+    "titulo": "Vidas Secas",
+    "autor": "Graciliano Ramos",
+    "ano_publicacao": 1938,
+    "pais": "Brasil",
+    "local": "Nordeste do Brasil",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 5,
+    "titulo": "Coraline",
+    "autor": "Neil Gaiman",
+    "ano_publicacao": 2002,
+    "pais": "Reino Unido",
+    "local": "Inglaterra (ficcional)",
+    "colecao": ["Clube Principal", "VPLN"]
+  },
+  {
+    "id": 6,
+    "titulo": "O pequeno príncipe",
+    "autor": "Antoine de Saint-Exupéry",
+    "ano_publicacao": 1943,
+    "pais": "França",
+    "local": "Planeta do Pequeno Príncipe (ficcional)",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 7,
+    "titulo": "Orgulho e Preconceito",
+    "autor": "Jane Austen",
+    "ano_publicacao": 1813,
+    "pais": "Reino Unido",
+    "local": "Inglaterra",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 8,
+    "titulo": "Capitães da Areia",
+    "autor": "Jorge Amado",
+    "ano_publicacao": 1937,
+    "pais": "Brasil",
+    "local": "Salvador, Bahia",
+    "colecao": ["Clube Principal", "VPLN"]
+  },
+  {
+    "id": 9,
+    "titulo": "O médico e o monstro",
+    "autor": "Robert Louis Stevenson",
+    "ano_publicacao": 1886,
+    "pais": "Reino Unido",
+    "local": "Londres",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 10,
+    "titulo": "Frankenstein ou o Prometeu Moderno",
+    "autor": "Mary Shelley",
+    "ano_publicacao": 1818,
+    "pais": "Reino Unido",
+    "local": "Suíça / Alemanha / Reino Unido",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 11,
+    "titulo": "Ardil-22",
+    "autor": "Joseph Heller",
+    "ano_publicacao": 1961,
+    "pais": "Estados Unidos",
+    "local": "Mediterrâneo (Segunda Guerra Mundial)",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 12,
+    "titulo": "Memórias Póstumas de Brás Cubas",
+    "autor": "Machado de Assis",
+    "ano_publicacao": 1881,
+    "pais": "Brasil",
+    "local": "Rio de Janeiro",
+    "colecao": ["Clube Principal", "VPLN"]
+  },
+  {
+    "id": 13,
+    "titulo": "Romeu e Julieta",
+    "autor": "William Shakespeare",
+    "ano_publicacao": 1597,
+    "pais": "Reino Unido",
+    "local": "Verona, Itália",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 14,
+    "titulo": "A Volta ao Mundo em 80 Dias",
+    "autor": "Jules Verne",
+    "ano_publicacao": 1873,
+    "pais": "França",
+    "local": "Global",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 15,
+    "titulo": "O Morro dos Ventos Uivantes",
+    "autor": "Emily Brontë",
+    "ano_publicacao": 1847,
+    "pais": "Reino Unido",
+    "local": "Yorkshire, Inglaterra",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 16,
+    "titulo": "Dom Casmurro",
+    "autor": "Machado de Assis",
+    "ano_publicacao": 1899,
+    "pais": "Brasil",
+    "local": "Rio de Janeiro",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 17,
+    "titulo": "Admirável Mundo Novo",
+    "autor": "Aldous Huxley",
+    "ano_publicacao": 1932,
+    "pais": "Reino Unido",
+    "local": "Futuro distópico (ficcional)",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 18,
+    "titulo": "O Sol é Para Todos",
+    "autor": "Harper Lee",
+    "ano_publicacao": 1960,
+    "pais": "Estados Unidos",
+    "local": "Alabama",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 19,
+    "titulo": "O Meu Pé de Laranja Lima",
+    "autor": "José Mauro de Vasconcelos",
+    "ano_publicacao": 1968,
+    "pais": "Brasil",
+    "local": "Bangu, Rio de Janeiro",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 20,
+    "titulo": "Terra dos Homens",
+    "autor": "Antoine de Saint-Exupéry",
+    "ano_publicacao": 1939,
+    "pais": "França",
+    "local": "Diversos lugares do mundo",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 21,
+    "titulo": "O Menino do Dedo Verde",
+    "autor": "Maurice Druon",
+    "ano_publicacao": 1957,
+    "pais": "França",
+    "local": "Ficcional",
+    "colecao": ["Clube Principal", "VPLN"]
+  },
+  {
+    "id": 22,
+    "titulo": "Flores para Algernon",
+    "autor": "Daniel Keyes",
+    "ano_publicacao": 1959,
+    "pais": "Estados Unidos",
+    "local": "Nova York",
+    "colecao": ["Clube Principal", "VPLN"]
+  },
+  {
+    "id": 23,
+    "titulo": "A Hora da Estrela",
+    "autor": "Clarice Lispector",
+    "ano_publicacao": 1977,
+    "pais": "Brasil",
+    "local": "Rio de Janeiro",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 24,
+    "titulo": "Ensaio sobre a Cegueira",
+    "autor": "José Saramago",
+    "ano_publicacao": 1995,
+    "pais": "Portugal",
+    "local": "Cidade sem nome (ficcional)",
+    "colecao": ["Clube Principal", "VPLN"]
+  },
+  {
+    "id": 25,
+    "titulo": "Mrs. Dalloway",
+    "autor": "Virginia Woolf",
+    "ano_publicacao": 1925,
+    "pais": "Reino Unido",
+    "local": "Londres",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 26,
+    "titulo": "Fahrenheit 451",
+    "autor": "Ray Bradbury",
+    "ano_publicacao": 1953,
+    "pais": "Estados Unidos",
+    "local": "Futuro distópico (ficcional)",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 27,
+    "titulo": "O Alienista",
+    "autor": "Machado de Assis",
+    "ano_publicacao": 1882,
+    "pais": "Brasil",
+    "local": "Itaguaí, RJ",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 28,
+    "titulo": "O Velho e o Mar",
+    "autor": "Ernest Hemingway",
+    "ano_publicacao": 1952,
+    "pais": "Estados Unidos",
+    "local": "Cuba",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 29,
+    "titulo": "Viagem ao Centro da Terra",
+    "autor": "Jules Verne",
+    "ano_publicacao": 1864,
+    "pais": "França",
+    "local": "Islândia/Subsolo terrestre (ficcional)",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 30,
+    "titulo": "O Retrato de Dorian Gray",
+    "autor": "Oscar Wilde",
+    "ano_publicacao": 1890,
+    "pais": "Reino Unido",
+    "local": "Londres",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 31,
+    "titulo": "Auto da Compadecida",
+    "autor": "Ariano Suassuna",
+    "ano_publicacao": 1955,
+    "pais": "Brasil",
+    "local": "Nordeste do Brasil",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 32,
+    "titulo": "Terra sonâmbula",
+    "autor": "Mia Couto",
+    "ano_publicacao": 1992,
+    "pais": "Moçambique",
+    "local": "Moçambique",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 33,
+    "titulo": "O apanhador no campo de centeio",
+    "autor": "J. D. Salinger",
+    "ano_publicacao": 1951,
+    "pais": "Estados Unidos",
+    "local": "Nova York",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 34,
+    "titulo": "Amor de perdição",
+    "autor": "Camilo Castelo Branco",
+    "ano_publicacao": 1862,
+    "pais": "Portugal",
+    "local": "Portugal",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 35,
+    "titulo": "O cortiço",
+    "autor": "Aluísio de Azevedo",
+    "ano_publicacao": 1890,
+    "pais": "Brasil",
+    "local": "Rio de Janeiro",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 36,
+    "titulo": "A elegância do ouriço",
+    "autor": "Muriel Barbery",
+    "ano_publicacao": 2006,
+    "pais": "França",
+    "local": "Paris",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 37,
+    "titulo": "O grande Gatsby",
+    "autor": "F. Scott Fitzgerald",
+    "ano_publicacao": 1925,
+    "pais": "Estados Unidos",
+    "local": "Nova York",
+    "colecao": ["Clube Principal", "VPLN"]
+  },
+  {
+    "id": 38,
+    "titulo": "Um conto de Natal",
+    "autor": "Charles Dickens",
+    "ano_publicacao": 1843,
+    "pais": "Reino Unido",
+    "local": "Londres",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 39,
+    "titulo": "Senhora",
+    "autor": "José de Alencar",
+    "ano_publicacao": 1875,
+    "pais": "Brasil",
+    "local": "Rio de Janeiro",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 40,
+    "titulo": "Drácula",
+    "autor": "Bram Stoker",
+    "ano_publicacao": 1897,
+    "pais": "Irlanda",
+    "local": "Transilvânia / Londres",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 41,
+    "titulo": "Alice através do espelho",
+    "autor": "Lewis Carroll",
+    "ano_publicacao": 1871,
+    "pais": "Reino Unido",
+    "local": "País das Maravilhas (ficcional)",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 42,
+    "titulo": "O estrangeiro",
+    "autor": "Albert Camus",
+    "ano_publicacao": 1942,
+    "pais": "França",
+    "local": "Argélia",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 43,
+    "titulo": "Torto arado",
+    "autor": "Itamar Vieira Junior",
+    "ano_publicacao": 2019,
+    "pais": "Brasil",
+    "local": "Bahia",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 44,
+    "titulo": "A incrível viagem de Schackleton",
+    "autor": "Alfred Lansing",
+    "ano_publicacao": 1959,
+    "pais": "Estados Unidos",
+    "local": "Antártica",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 45,
+    "titulo": "Percy Jackson e o ladrão de raios",
+    "autor": "Rick Riordan",
+    "ano_publicacao": 2005,
+    "pais": "Estados Unidos",
+    "local": "Estados Unidos / mitologia grega",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 46,
+    "titulo": "Luciola",
+    "autor": "José de Alencar",
+    "ano_publicacao": 1862,
+    "pais": "Brasil",
+    "local": "Rio de Janeiro",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 47,
+    "titulo": "O processo",
+    "autor": "Franz Kafka",
+    "ano_publicacao": 1925,
+    "pais": "Áustria-Hungria",
+    "local": "Praga (ficcional)",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 48,
+    "titulo": "O Hobbit",
+    "autor": "J.R.R. Tolkien",
+    "ano_publicacao": 1937,
+    "pais": "Reino Unido",
+    "local": "Terra Média (ficcional)",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 49,
+    "titulo": "A princesa prometida",
+    "autor": "William Goldman",
+    "ano_publicacao": 1973,
+    "pais": "Estados Unidos",
+    "local": "Florin (ficcional)",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 50,
+    "titulo": "Os meninos da rua Paulo",
+    "autor": "Ferenc Mólnar",
+    "ano_publicacao": 1906,
+    "pais": "Hungria",
+    "local": "Budapeste",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 51,
+    "titulo": "A mão e a luva",
+    "autor": "Machado de Assis",
+    "ano_publicacao": 1874,
+    "pais": "Brasil",
+    "local": "Rio de Janeiro",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 52,
+    "titulo": "Razão e sensibilidade",
+    "autor": "Jane Austen",
+    "ano_publicacao": 1811,
+    "pais": "Reino Unido",
+    "local": "Inglaterra",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 53,
+    "titulo": "Sonho de uma noite de verão",
+    "autor": "William Shakespeare",
+    "ano_publicacao": 1595,
+    "pais": "Reino Unido",
+    "local": "Atenas / floresta mágica",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 54,
+    "titulo": "As aventuras de Tom Sawyer",
+    "autor": "Mark Twain",
+    "ano_publicacao": 1876,
+    "pais": "Estados Unidos",
+    "local": "Missouri",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 55,
+    "titulo": "A mocinha do Mercado Central",
+    "autor": "Stella Maris Rezende",
+    "ano_publicacao": 2009,
+    "pais": "Brasil",
+    "local": "Belo Horizonte",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 56,
+    "titulo": "O lugar",
+    "autor": "Annie Ernaux",
+    "ano_publicacao": 1983,
+    "pais": "França",
+    "local": "França",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 57,
+    "titulo": "O Natal de Poirot",
+    "autor": "Agatha Christie",
+    "ano_publicacao": 1938,
+    "pais": "Reino Unido",
+    "local": "Inglaterra",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 58,
+    "titulo": "Gente pobre",
+    "autor": "Fiódor Dostoiévski",
+    "ano_publicacao": 1846,
+    "pais": "Rússia",
+    "local": "São Petersburgo",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 59,
+    "titulo": "Senhor das moscas",
+    "autor": "William Golding",
+    "ano_publicacao": 1954,
+    "pais": "Reino Unido",
+    "local": "Ilha desabitada (ficcional)",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 60,
+    "titulo": "Menino de engenho",
+    "autor": "José Lins do Rego",
+    "ano_publicacao": 1932,
+    "pais": "Brasil",
+    "local": "Nordeste do Brasil",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 61,
+    "titulo": "Ao farol",
+    "autor": "Virginia Woolf",
+    "ano_publicacao": 1927,
+    "pais": "Reino Unido",
+    "local": "Escócia",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 62,
+    "titulo": "Eu, robô",
+    "autor": "Isaac Asimov",
+    "ano_publicacao": 1950,
+    "pais": "Estados Unidos",
+    "local": "Futuro (ficcional)",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 63,
+    "titulo": "Cem anos de solidão",
+    "autor": "Gabriel Garcia Márquez",
+    "ano_publicacao": 1967,
+    "pais": "Colômbia",
+    "local": "Macondo (ficcional)",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 64,
+    "titulo": "Aqueles cães malditos de Arquelau",
+    "autor": "Isaias Pessotti",
+    "ano_publicacao": 2004,
+    "pais": "Brasil",
+    "local": "Brasil",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 65,
+    "titulo": "A biblioteca da meia-noite",
+    "autor": "Matt Haig",
+    "ano_publicacao": 2020,
+    "pais": "Reino Unido",
+    "local": "Reino Unido",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 66,
+    "titulo": "O príncipe e o mendigo",
+    "autor": "Mark Twain",
+    "ano_publicacao": 1881,
+    "pais": "Estados Unidos",
+    "local": "Inglaterra",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 67,
+    "titulo": "A relíquia",
+    "autor": "Eça de Queirós",
+    "ano_publicacao": 1887,
+    "pais": "Portugal",
+    "local": "Lisboa / Jerusalém",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 68,
+    "titulo": "Olhai os lírios do campo",
+    "autor": "Erico Verissimo",
+    "ano_publicacao": 1938,
+    "pais": "Brasil",
+    "local": "Brasil",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 69,
+    "titulo": "Persuasão",
+    "autor": "Jane Austen",
+    "ano_publicacao": 1817,
+    "pais": "Reino Unido",
+    "local": "Inglaterra",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 70,
+    "titulo": "O jardim secreto",
+    "autor": "Frances Hodgson Burnett",
+    "ano_publicacao": 1911,
+    "pais": "Reino Unido",
+    "local": "Yorkshire",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 71,
+    "titulo": "Na natureza selvagem",
+    "autor": "Jon Krakauer",
+    "ano_publicacao": 1996,
+    "pais": "Estados Unidos",
+    "local": "Alasca",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 72,
+    "titulo": "Nós, o Atlântico em solitário",
+    "autor": "Tamara Klink",
+    "ano_publicacao": 2021,
+    "pais": "Brasil",
+    "local": "Atlântico",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 73,
+    "titulo": "A morte de Ivan Ilitch",
+    "autor": "Liev Tolstói",
+    "ano_publicacao": 1886,
+    "pais": "Rússia",
+    "local": "Rússia",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 74,
+    "titulo": "O menino no espelho",
+    "autor": "Fernando Sabino",
+    "ano_publicacao": 1982,
+    "pais": "Brasil",
+    "local": "Belo Horizonte",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 75,
+    "titulo": "O castelo animado",
+    "autor": "Diana Wynne Jones",
+    "ano_publicacao": 1986,
+    "pais": "Reino Unido",
+    "local": "Reino fictício",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 76,
+    "titulo": "Odisseia",
+    "autor": "Homero",
+    "ano_publicacao": -800,
+    "pais": "Grécia Antiga",
+    "local": "Mar Mediterrâneo / Grécia",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 77,
+    "titulo": "Ratos e homens",
+    "autor": "John Steinbeck",
+    "ano_publicacao": 1937,
+    "pais": "Estados Unidos",
+    "local": "Califórnia",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 78,
+    "titulo": "Nem sinal de asas",
+    "autor": "Marcela Dantés",
+    "ano_publicacao": 2023,
+    "pais": "Brasil",
+    "local": "Brasil",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 79,
+    "titulo": "O guia do mochileiro das galáxias",
+    "autor": "Douglas Adams",
+    "ano_publicacao": 1979,
+    "pais": "Reino Unido",
+    "local": "Universo (ficcional)",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 80,
+    "titulo": "Um lugar bem longe daqui",
+    "autor": "Delia Owens",
+    "ano_publicacao": 2018,
+    "pais": "Estados Unidos",
+    "local": "Carolina do Norte",
+    "colecao": ["Clube Principal"]
+  },
+  {
+    "id": 81,
+    "titulo": "Coraline",
+    "autor": "Neil Gaiman",
+    "ano_publicacao": 2002,
+    "pais": "Reino Unido",
+    "local": "Casa da Coraline (ficcional)",
+    "colecao": ["VPLN"]
+  },
+  {
+    "id": 82,
+    "titulo": "O menino do dedo verde",
+    "autor": "Maurice Druon",
+    "ano_publicacao": 1957,
+    "pais": "França",
+    "local": "França (ficcional)",
+    "colecao": ["VPLN"]
+  },
+  {
+    "id": 83,
+    "titulo": "Capitães da areia",
+    "autor": "Jorge Amado",
+    "ano_publicacao": 1937,
+    "pais": "Brasil",
+    "local": "Salvador, Bahia",
+    "colecao": ["VPLN"]
+  },
+  {
+    "id": 84,
+    "titulo": "Ensaio sobre a cegueira",
+    "autor": "José Saramago",
+    "ano_publicacao": 1995,
+    "pais": "Portugal",
+    "local": "Cidade não nomeada (ficcional)",
+    "colecao": ["VPLN"]
+  },
+  {
+    "id": 85,
+    "titulo": "A metamorfose",
+    "autor": "Franz Kafka",
+    "ano_publicacao": 1915,
+    "pais": "Áustria-Hungria",
+    "local": "Praga (ficcional)",
+    "colecao": ["VPLN"]
+  },
+  {
+    "id": 86,
+    "titulo": "Memórias póstumas de Brás Cubas",
+    "autor": "Machado de Assis",
+    "ano_publicacao": 1881,
+    "pais": "Brasil",
+    "local": "Rio de Janeiro",
+    "colecao": ["VPLN"]
+  },
+  {
+    "id": 87,
+    "titulo": "O grande Gatsby",
+    "autor": "F. Scott Fitzgerald",
+    "ano_publicacao": 1925,
+    "pais": "Estados Unidos",
+    "local": "Long Island, Nova York",
+    "colecao": ["VPLN"]
+  },
+  {
+    "id": 88,
+    "titulo": "Flores para Algernon",
+    "autor": "Daniel Keyes",
+    "ano_publicacao": 1966,
+    "pais": "Estados Unidos",
+    "local": "Estados Unidos",
+    "colecao": ["VPLN"]
+  },
+  {
+    "id": 89,
+    "titulo": "Grande sertão: veredas",
+    "autor": "João Guimarães Rosa",
+    "ano_publicacao": 1956,
+    "pais": "Brasil",
+    "local": "Sertão de Minas Gerais",
+    "colecao": ["OPECA"]
+  },
+  {
+    "id": 90,
+    "titulo": "Dom Quixote",
+    "autor": "Miguel de Cervantes",
+    "ano_publicacao": 1605,
+    "pais": "Espanha",
+    "local": "Espanha",
+    "colecao": ["OPECA"]
+  },
+  {
+    "id": 91,
+    "titulo": "Jane Eyre",
+    "autor": "Charlotte Brontë",
+    "ano_publicacao": 1847,
+    "pais": "Reino Unido",
+    "local": "Inglaterra",
+    "colecao": ["OPECA"]
+  },
+  {
+    "id": 92,
+    "titulo": "Crime e castigo",
+    "autor": "Fiódor Dostoiévski",
+    "ano_publicacao": 1866,
+    "pais": "Rússia",
+    "local": "São Petersburgo",
+    "colecao": ["OPECA"]
+  },
+  {
+    "id": 93,
+    "titulo": "Mulherzinhas",
+    "autor": "Louisa May Alcott",
+    "ano_publicacao": 1868,
+    "pais": "Estados Unidos",
+    "local": "Estados Unidos",
+    "colecao": ["OPECA"]
+  },
+  {
+    "id": 94,
+    "titulo": "Anna Kariênina",
+    "autor": "Liev Tolstói",
+    "ano_publicacao": 1877,
+    "pais": "Rússia",
+    "local": "Rússia",
+    "colecao": ["OPECA"]
+  }
+]

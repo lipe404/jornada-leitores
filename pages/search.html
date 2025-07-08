@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscar Livros - Leitores Inoxidáveis</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/search.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <h1 class="logo">Leitores Inoxidáveis</h1>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Início</a></li>
+          <li>
+            <a href="search.html" class="nav-link active">Buscar Livros</a>
+          </li>
+          <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+          <li><a href="map.html" class="nav-link">Mapa Literário</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="search-main">
+      <div class="search-hero">
+        <div class="hero-background">
+          <div class="floating-books">
+            <span class="book-icon">📖</span>
+            <span class="book-icon">📚</span>
+            <span class="book-icon">📗</span>
+            <span class="book-icon">📘</span>
+            <span class="book-icon">📙</span>
+            <span class="book-icon">📕</span>
+          </div>
+        </div>
+        <div class="hero-content">
+          <h1>Descubra Novos Mundos</h1>
+          <p>
+            Explore milhões de livros e encontre sua próxima grande aventura
+            literária
+          </p>
+
+          <div class="search-container">
+            <div class="search-box">
+              <div class="search-input-wrapper">
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Digite o nome do livro ou autor..."
+                  autocomplete="off"
+                />
+                <div class="search-suggestions" id="searchSuggestions"></div>
+              </div>
+              <button id="searchBtn" class="search-button">
+                <span class="search-icon">🔍</span>
+                <span class="search-text">Buscar</span>
+              </button>
+            </div>
+
+            <div class="search-filters">
+              <div class="filter-group">
+                <label for="categoryFilter">Categoria:</label>
+                <select id="categoryFilter">
+                  <option value="all">Todas as fontes</option>
+                  <option value="club">Nosso Clube</option>
+                  <option value="external">Biblioteca Mundial</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="sortFilter">Ordenar por:</label>
+                <select id="sortFilter">
+                  <option value="relevance">Relevância</option>
+                  <option value="year">Ano de Publicação</option>
+                  <option value="title">Título A-Z</option>
+                  <option value="author">Autor A-Z</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="quick-searches">
+            <h3>Buscas Populares:</h3>
+            <div class="quick-search-tags">
+              <button class="quick-tag" data-search="Machado de Assis">
+                Machado de Assis
+              </button>
+              <button class="quick-tag" data-search="Jane Austen">
+                Jane Austen
+              </button>
+              <button class="quick-tag" data-search="Franz Kafka">
+                Franz Kafka
+              </button>
+              <button class="quick-tag" data-search="ficção científica">
+                Ficção Científica
+              </button>
+              <button class="quick-tag" data-search="romance clássico">
+                Romance Clássico
+              </button>
+              <button class="quick-tag" data-search="literatura brasileira">
+                Literatura Brasileira
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-results-section">
+        <div class="results-header" id="resultsHeader" style="display: none">
+          <h2>Resultados da Busca</h2>
+          <div class="results-count" id="resultsCount"></div>
+        </div>
+
+        <div class="results-container" id="resultsContainer">
+          <div class="search-placeholder">
+            <div class="placeholder-icon">🔍</div>
+            <h3>Pronto para explorar?</h3>
+            <p>Digite o nome de um livro ou autor para começar sua busca</p>
+
+            <div class="featured-collections">
+              <h4>Nossas Coleções Especiais:</h4>
+              <div class="collection-cards">
+                <div class="collection-card" data-collection="clube">
+                  <div class="collection-icon">📚</div>
+                  <h5>Clube Principal</h5>
+                  <p>80 livros lidos desde 2018</p>
+                </div>
+                <div class="collection-card" data-collection="vpln">
+                  <div class="collection-icon">🌟</div>
+                  <h5>VPLN</h5>
+                  <p>Seleção especial de clássicos</p>
+                </div>
+                <div class="collection-card" data-collection="opeca">
+                  <div class="collection-icon">🎭</div>
+                  <h5>OPECA</h5>
+                  <p>Grandes obras da literatura</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="load-more-container"
+          id="loadMoreContainer"
+          style="display: none"
+        >
+          <button id="loadMoreBtn" class="load-more-btn">
+            <span>Carregar mais resultados</span>
+            <div class="loading-spinner" style="display: none"></div>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="search-footer">
+      <div class="footer-content">
+        <p>
+          Dados fornecidos pela
+          <a href="https://openlibrary.org">Open Library</a> e nossa coleção
+          pessoal
+        </p>
+        <div class="footer-stats">
+          <span>📖 Milhões de livros</span>
+          <span>🌍 Autores do mundo todo</span>
+          <span>⚡ Busca instantânea</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/search.js"></script>
+  </body>
+</html>

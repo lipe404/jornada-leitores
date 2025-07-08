@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa Literário - Leitores Inoxidáveis</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/map.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <h1 class="logo">Leitores Inoxidáveis</h1>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Início</a></li>
+          <li><a href="search.html" class="nav-link">Buscar Livros</a></li>
+          <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+          <li><a href="map.html" class="nav-link active">Mapa Literário</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="map-main">
+      <div class="map-hero">
+        <h1>Atlas Literário Mundial</h1>
+        <p>Descubra onde nasceram as histórias que tocaram nossos corações</p>
+      </div>
+
+      <div class="map-controls">
+        <div class="control-group">
+          <label>Filtrar por categoria:</label>
+          <select id="categoryFilter">
+            <option value="all">Todas as categorias</option>
+            <option value="main">Clube Principal</option>
+            <option value="vpln">VPLN</option>
+            <option value="opeca">OPECA</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label>Período:</label>
+          <select id="periodFilter">
+            <option value="all">Todos os períodos</option>
+            <option value="classic">Clássicos (até 1900)</option>
+            <option value="modern">Modernos (1900-1950)</option>
+            <option value="contemporary">Contemporâneos (1950+)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="map-container">
+        <div id="literaryMap"></div>
+        <div class="map-sidebar" id="mapSidebar">
+          <h3>Informações do Livro</h3>
+          <div id="bookDetails">
+            <p>Clique em um marcador no mapa para ver detalhes do livro</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-legend">
+        <h4>Legenda</h4>
+        <div class="legend-items">
+          <div class="legend-item">
+            <span class="legend-marker main"></span>
+            <span>Clube Principal</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-marker vpln"></span>
+            <span>VPLN</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-marker opeca"></span>
+            <span>OPECA</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/map.js"></script>
+  </body>
+</html>

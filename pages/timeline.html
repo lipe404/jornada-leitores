@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeline Literária - Leitores Inoxidáveis</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/timeline.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <h1 class="logo">Leitores Inoxidáveis</h1>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Início</a></li>
+          <li><a href="search.html" class="nav-link">Buscar Livros</a></li>
+          <li><a href="timeline.html" class="nav-link active">Timeline</a></li>
+          <li><a href="map.html" class="nav-link">Mapa Literário</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="timeline-main">
+      <div class="timeline-hero">
+        <h1>Viagem no Tempo Literário</h1>
+        <p>
+          Explore a cronologia dos grandes clássicos que moldaram nossa jornada
+        </p>
+        <div class="timeline-filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="main">Clube Principal</button>
+          <button class="filter-btn" data-filter="vpln">VPLN</button>
+          <button class="filter-btn" data-filter="opeca">OPECA</button>
+        </div>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-container" id="timelineContainer">
+          <!-- Timeline será gerada aqui -->
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/timeline.js"></script>
+  </body>
+</html>
