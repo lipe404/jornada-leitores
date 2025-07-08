@@ -12,18 +12,44 @@
     />
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
       <div class="nav-container">
-        <h1 class="logo">Leitores Inoxidáveis</h1>
-        <ul class="nav-menu">
-          <li><a href="../index.html" class="nav-link">Início</a></li>
-          <li>
-            <a href="search.html" class="nav-link active">Buscar Livros</a>
+        <a href="#home" class="logo">Leitores Inoxidáveis</a>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link active">Início</a>
           </li>
-          <li><a href="timeline.html" class="nav-link">Timeline</a></li>
-          <li><a href="map.html" class="nav-link">Mapa Literário</a></li>
+          <li class="nav-item">
+            <a href="search.html" class="nav-link">Buscar Livros</a>
+          </li>
+          <li class="nav-item">
+            <a href="timeline.html" class="nav-link">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a href="map.html" class="nav-link">Mapa Literário</a>
+          </li>
         </ul>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <div class="hamburger">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </div>
+          <span class="sr-only">Menu</span>
+        </button>
       </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div class="nav-overlay" id="navOverlay"></div>
     </nav>
 
     <main class="search-main">
@@ -57,7 +83,6 @@
                 <div class="search-suggestions" id="searchSuggestions"></div>
               </div>
               <button id="searchBtn" class="search-button">
-                <span class="search-icon">🔍</span>
                 <span class="search-text">Buscar</span>
               </button>
             </div>
@@ -132,7 +157,7 @@
                 <div class="collection-card" data-collection="vpln">
                   <div class="collection-icon">🌟</div>
                   <h5>VPLN</h5>
-                  <p>Seleção especial de clássicos</p>
+                  <p>Seleção especial de releituras</p>
                 </div>
                 <div class="collection-card" data-collection="opeca">
                   <div class="collection-icon">🎭</div>
@@ -172,6 +197,7 @@
       </div>
     </footer>
 
+    <script src="../js/main.js"></script>
     <script src="../js/search.js"></script>
   </body>
 </html>

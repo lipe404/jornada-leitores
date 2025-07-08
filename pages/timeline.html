@@ -12,29 +12,77 @@
     />
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
       <div class="nav-container">
-        <h1 class="logo">Leitores Inoxidáveis</h1>
-        <ul class="nav-menu">
-          <li><a href="../index.html" class="nav-link">Início</a></li>
-          <li><a href="search.html" class="nav-link">Buscar Livros</a></li>
-          <li><a href="timeline.html" class="nav-link active">Timeline</a></li>
-          <li><a href="map.html" class="nav-link">Mapa Literário</a></li>
+        <a href="../index.html" class="logo">Leitores Inoxidáveis</a>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Início</a>
+          </li>
+          <li class="nav-item">
+            <a href="search.html" class="nav-link">Buscar Livros</a>
+          </li>
+          <li class="nav-item">
+            <a href="timeline.html" class="nav-link active">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a href="map.html" class="nav-link">Mapa Literário</a>
+          </li>
         </ul>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <div class="hamburger">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </div>
+          <span class="sr-only">Menu</span>
+        </button>
       </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div class="nav-overlay" id="navOverlay"></div>
     </nav>
 
     <main class="timeline-main">
       <div class="timeline-hero">
-        <h1>Viagem no Tempo Literário</h1>
-        <p>
-          Explore a cronologia dos grandes clássicos que moldaram nossa jornada
-        </p>
-        <div class="timeline-filters">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="main">Clube Principal</button>
-          <button class="filter-btn" data-filter="vpln">VPLN</button>
-          <button class="filter-btn" data-filter="opeca">OPECA</button>
+        <div class="hero-background">
+          <div class="floating-elements">
+            <span class="float-icon">📖</span>
+            <span class="float-icon">⏰</span>
+            <span class="float-icon">📚</span>
+            <span class="float-icon">🕰️</span>
+          </div>
+        </div>
+        <div class="hero-content">
+          <h1>Viagem no Tempo Literário</h1>
+          <p>
+            Explore a cronologia dos grandes clássicos que moldaram nossa
+            jornada
+          </p>
+
+          <div class="timeline-filters">
+            <button class="filter-btn active" data-filter="all">
+              <span class="filter-text">Todos</span>
+            </button>
+            <button class="filter-btn" data-filter="main">
+              <span class="filter-text">Clube Principal</span>
+            </button>
+            <button class="filter-btn" data-filter="vpln">
+              <span class="filter-text">VPLN</span>
+            </button>
+            <button class="filter-btn" data-filter="opeca">
+              <span class="filter-text">OPECA</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -45,6 +93,7 @@
       </div>
     </main>
 
+    <script src="../js/main.js"></script>
     <script src="../js/timeline.js"></script>
   </body>
 </html>

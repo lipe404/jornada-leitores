@@ -169,7 +169,7 @@ class LiteraryTimeline {
         const decade = Math.floor(book.year / 10) * 10;
 
         return `
-                    <div class="timeline-item ${isLeft ? "left" : "right"}" 
+                    <div class="timeline-item ${isLeft ? "left" : "right"}"
                          data-year="${book.year}"
                          data-decade="${decade}"
                          data-collections="${collections}"
@@ -233,7 +233,7 @@ class LiteraryTimeline {
     const years = this.filteredBooks.map((book) => book.year);
     const minYear = Math.min(...years);
     const maxYear = Math.max(...years);
-    return `${minYear} - ${maxYear}`;
+    return `${minYear} até ${maxYear}`;
   }
 
   getUniqueAuthors() {

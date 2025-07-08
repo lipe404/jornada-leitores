@@ -11,27 +11,53 @@
     />
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
       <div class="nav-container">
-        <h1 class="logo">Leitores Inoxidáveis</h1>
-        <ul class="nav-menu">
-          <li><a href="#home" class="nav-link">Início</a></li>
-          <li>
+        <a href="#home" class="logo">Leitores Inoxidáveis</a>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">Início</a>
+          </li>
+          <li class="nav-item">
             <a href="pages/search.html" class="nav-link">Buscar Livros</a>
           </li>
-          <li><a href="pages/timeline.html" class="nav-link">Timeline</a></li>
-          <li><a href="pages/map.html" class="nav-link">Mapa Literário</a></li>
+          <li class="nav-item">
+            <a href="pages/timeline.html" class="nav-link">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/map.html" class="nav-link">Mapa Literário</a>
+          </li>
         </ul>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <div class="hamburger">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </div>
+          <span class="sr-only">Menu</span>
+        </button>
       </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div class="nav-overlay" id="navOverlay"></div>
     </nav>
 
-    <main class="hero">
+    <main class="hero" id="home">
       <div class="hero-content">
         <h2>Uma Jornada Através das Páginas</h2>
         <p>Explore nossa coleção de livros lidos desde agosto de 2018</p>
         <div class="hero-stats">
           <div class="stat">
-            <span class="stat-number">80+</span>
+            <span class="stat-number">94</span>
             <span class="stat-label">Livros Lidos</span>
           </div>
           <div class="stat">
