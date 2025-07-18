@@ -1166,3 +1166,165 @@
     opacity: 0.25;
   }
 }
+
+/* Botão Voltar ao Topo */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-secondary);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #e17055 0%, #d63031 100%);
+}
+
+.back-to-top:active {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.back-to-top:hover svg {
+  transform: translateY(-2px);
+  animation: bounceUp 0.6s ease infinite alternate;
+}
+
+.back-to-top-text {
+  font-size: 0.6rem;
+  margin-top: 1px;
+  opacity: 0.9;
+}
+
+/* Animação de bounce para o ícone */
+@keyframes bounceUp {
+  0% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Efeito de pulso quando aparece */
+.back-to-top.show {
+  animation: backToTopAppear 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes backToTopAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .back-to-top svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .back-to-top-text {
+    font-size: 0.55rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .back-to-top svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .back-to-top-text {
+    font-size: 0.5rem;
+  }
+}
+
+/* Acessibilidade */
+.back-to-top:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+/* Modo de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top {
+    transition-duration: 0.1s;
+  }
+  
+  .back-to-top:hover svg {
+    animation: none;
+    transform: none;
+  }
+  
+  .back-to-top.show {
+    animation: none;
+  }
+}
+
+/* Modo escuro/alto contraste */
+@media (prefers-contrast: high) {
+  .back-to-top {
+    background: #000;
+    border-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+  }
+}

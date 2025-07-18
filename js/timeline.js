@@ -5,6 +5,7 @@ class LiteraryTimeline {
     this.filteredBooks = [];
     this.currentFilter = "all";
     this.isLoading = false;
+    this.backToTopButton = null; // Nova propriedade
     this.init();
   }
 
@@ -14,6 +15,15 @@ class LiteraryTimeline {
     this.setupFilters();
     this.createTimeline();
     this.hideLoading();
+    // Inicializar botão "Voltar ao Topo"
+    this.initBackToTopButton();
+  }
+
+  initBackToTopButton() {
+    // Aguardar um pouco para garantir que o DOM está pronto
+    setTimeout(() => {
+      this.backToTopButton = new BackToTopButton();
+    }, 100);
   }
 
   showLoading() {
@@ -434,3 +444,96 @@ class LiteraryTimeline {
 document.addEventListener("DOMContentLoaded", () => {
   new LiteraryTimeline();
 });
+
+// Classe para gerenciar o botão "Voltar ao Topo"
+class BackToTopButton {
+  constructor() {
+    this.button = document.getElementById('backToTop');
+    this.scrollThreshold = 300; // Mostra o botão após 300px de scroll
+    this.init();
+  }
+
+  init() {
+    if (!this.button) return;
+    
+    this.setupEventListeners();
+    this.handleScroll(); // Verificar posição inicial
+  }
+
+  setupEventListeners() {
+    // Listener para scroll
+    window.addEventListener('scroll', this.throttle(this.handleScroll.bind(this), 100));
+    
+    // Listener para clique no botão
+    this.button.addEventListener('click', this.scrollToTop.bind(this));
+    
+    // Listener para teclado (acessibilidade)
+    this.button.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.scrollToTop();
+      }
+    });
+  }
+
+  handleScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > this.scrollThreshold) {
+      this.showButton();
+    } else {
+      this.hideButton();
+    }
+  }
+
+  showButton() {
+    if (!this.button.classList.contains('show')) {
+      this.button.classList.add('show');
+      this.button.setAttribute('aria-hidden', 'false');
+    }
+  }
+
+  hideButton() {
+    if (this.button.classList.contains('show')) {
+      this.button.classList.remove('show');
+      this.button.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  scrollToTop() {
+    // Scroll suave para o topo
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+
+    // Feedback visual
+    this.button.style.transform = 'translateY(-2px) scale(0.95)';
+    setTimeout(() => {
+      this.button.style.transform = '';
+    }, 150);
+
+    // Foco no elemento principal para acessibilidade
+    setTimeout(() => {
+      const mainElement = document.querySelector('main') || document.querySelector('.timeline-hero h1');
+      if (mainElement) {
+        mainElement.focus();
+      }
+    }, 500);
+  }
+
+  // Função throttle para otimizar performance do scroll
+  throttle(func, limit) {
+    let inThrottle;
+    return function() {
+      const args = arguments;
+      const context = this;
+      if (!inThrottle) {
+        func.apply(context, args);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+      }
+    }
+  }
+}
+
