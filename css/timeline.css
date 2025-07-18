@@ -1,6 +1,4 @@
-/* ===== ENHANCED TIMELINE STYLES WITH FULL RESPONSIVITY ===== */
-
-/* ===== CSS VARIABLES ===== */
+/* Variáveis CSS */
 :root {
   --timeline-line-width-desktop: 6px;
   --timeline-line-width-mobile: 4px;
@@ -12,7 +10,7 @@
   --timeline-content-padding-mobile: 1rem;
 }
 
-/* ===== MAIN TIMELINE CONTAINER ===== */
+/* Timeline Container */
 .timeline-main {
   margin-top: 80px;
   min-height: calc(100vh - 80px);
@@ -20,7 +18,7 @@
   position: relative;
 }
 
-/* ===== ENHANCED HERO SECTION ===== */
+/* Seção Hero */
 .timeline-hero {
   text-align: center;
   padding: clamp(2rem, 8vw, 4rem) var(--space-8);
@@ -31,6 +29,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+/* Efeito hover na seção hero */
+.timeline-hero:hover .float-icon {
+  opacity: 0.35;
+  animation-duration: 8s;
+}
+
+/* Efeito especial para o ícone de timeline */
+.float-icon:nth-child(4) svg {
+  animation: timelinePulse 3s ease-in-out infinite;
+}
+
+@keyframes timelinePulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 2px 6px rgba(108, 92, 231, 0.6));
+  }
+}
+
+.timeline-hero:hover .float-icon:nth-child(odd) {
+  animation-direction: reverse;
 }
 
 .hero-background {
@@ -47,50 +69,116 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .float-icon {
   position: absolute;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  opacity: 0.2;
-  animation: floatAnimation 8s ease-in-out infinite;
+  color: white;
+  opacity: 0.15;
+  animation: floatAnimation 10s ease-in-out infinite;
+  transition: all 0.4s ease;
+  transform-origin: center;
+  cursor: pointer;
 }
-
+.float-icon svg {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+  transition: all 0.4s ease;
+}
 .float-icon:nth-child(1) {
   top: 15%;
   left: 10%;
   animation-delay: 0s;
+  color: #74b9ff; /* Azul suave */
+}
+.float-icon:nth-child(1) svg {
+  width: 36px;
+  height: 36px;
 }
 .float-icon:nth-child(2) {
   top: 25%;
   right: 15%;
   animation-delay: 2s;
+  color: #fd79a8; /* Rosa suave */
+}
+.float-icon:nth-child(2) svg {
+  width: 38px;
+  height: 38px;
 }
 .float-icon:nth-child(3) {
   bottom: 30%;
   left: 20%;
   animation-delay: 4s;
+  color: #fdcb6e; /* Dourado */
+}
+.float-icon:nth-child(3) svg {
+  width: 34px;
+  height: 34px;
 }
 .float-icon:nth-child(4) {
   bottom: 20%;
   right: 25%;
   animation-delay: 6s;
+  color: #6c5ce7; /* Roxo */
+}
+.float-icon:nth-child(4) svg {
+  width: 40px;
+  height: 40px;
+}
+.float-icon:nth-child(5) {
+  top: 45%;
+  left: 5%;
+  animation-delay: 8s;
+  color: #a29bfe; /* Lavanda */
+}
+.float-icon:nth-child(6) {
+  top: 35%;
+  right: 8%;
+  animation-delay: 1s;
+  color: #55efc4; /* Verde água */
+}
+/* Efeito de pulso sutil para alguns ícones */
+.float-icon:nth-child(2),
+.float-icon:nth-child(4) {
+  animation-name: floatPulse;
+  animation-duration: 14s;
 }
 
 @keyframes floatAnimation {
   0%,
   100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 0.15;
   }
-  25% {
-    transform: translateY(-20px) rotate(5deg);
+  20% {
+    transform: translateY(-15px) rotate(3deg) scale(1.05);
+    opacity: 0.25;
   }
-  50% {
-    transform: translateY(-10px) rotate(-3deg);
+  40% {
+    transform: translateY(-25px) rotate(-2deg) scale(1.1);
+    opacity: 0.2;
   }
-  75% {
-    transform: translateY(-15px) rotate(2deg);
+  60% {
+    transform: translateY(-20px) rotate(1deg) scale(1.08);
+    opacity: 0.22;
   }
+  80% {
+    transform: translateY(-10px) rotate(-1deg) scale(1.03);
+    opacity: 0.18;
+  }
+}
+/* Variações de movimento para criar mais dinamismo */
+.float-icon:nth-child(even) {
+  animation-name: floatAnimationReverse;
+  animation-duration: 12s;
+}
+/* Interatividade sutil */
+.float-icon:hover {
+  opacity: 0.5 !important;
+  transform: scale(1.2) !important;
+  animation-play-state: paused;
 }
 
 .hero-content {
@@ -124,7 +212,7 @@
   line-height: 1.6;
 }
 
-/* ===== ENHANCED FILTERS ===== */
+/* Filtros */
 .timeline-filters {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -144,6 +232,7 @@
   transition: var(--transition);
   font-weight: 600;
   font-size: clamp(0.8rem, 2vw, 0.9rem);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
@@ -190,7 +279,7 @@
   font-size: clamp(0.75rem, 2vw, 0.85rem);
 }
 
-/* ===== TIMELINE WRAPPER ===== */
+/* Timeline */
 .timeline-wrapper {
   background: var(--bg-color);
   min-height: 100vh;
@@ -205,7 +294,6 @@
   padding: var(--space-4);
 }
 
-/* ===== TIMELINE STATS ===== */
 .timeline-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -252,7 +340,7 @@
   font-weight: 600;
 }
 
-/* ===== DESKTOP TIMELINE LINE ===== */
+/* Desktop Timeline Line */
 .timeline-line {
   position: absolute;
   left: 50%;
@@ -270,7 +358,7 @@
   z-index: 1;
 }
 
-/* ===== TIMELINE ITEMS - DESKTOP ===== */
+/* TIMELINE ITEMS - DESKTOP */
 .timeline-item {
   position: relative;
   margin: var(--timeline-spacing-desktop) 0;
@@ -325,7 +413,7 @@
   box-shadow: var(--shadow-hover);
 }
 
-/* ===== TIMELINE ARROWS - DESKTOP ===== */
+/* TIMELINE ARROWS - DESKTOP */
 .timeline-item.left .timeline-content::after {
   content: "";
   position: absolute;
@@ -346,7 +434,7 @@
   border-right-color: white;
 }
 
-/* ===== TIMELINE CONTENT ELEMENTS ===== */
+/* TIMELINE CONTENT ELEMENTS */
 .timeline-header {
   display: flex;
   justify-content: space-between;
@@ -479,7 +567,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== TIMELINE MARKERS - DESKTOP ===== */
+/* TIMELINE MARKERS - DESKTOP */
 .timeline-marker {
   position: absolute;
   left: 50%;
@@ -526,7 +614,7 @@
   transform: translateX(-50%) translateY(-5px);
 }
 
-/* ===== LOADING & ERROR STATES ===== */
+/* LOADING & ERROR STATES */
 .timeline-loading {
   text-align: center;
   padding: var(--space-16);
@@ -567,7 +655,7 @@
   margin: var(--space-8);
 }
 
-/* ===== ANIMATIONS ===== */
+/* Animações */
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -606,10 +694,29 @@
   }
 }
 
-/* ===== COMPREHENSIVE MOBILE RESPONSIVITY ===== */
+/* Responsividade */
 
-/* Extra Small Devices (phones, 480px and down) */
 @media (max-width: 480px) {
+  .float-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .float-icon:nth-child(1) svg,
+  .float-icon:nth-child(4) svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .float-icon {
+    opacity: 0.08;
+  }
+
+  /* Ocultar alguns ícones em telas muito pequenas */
+  .float-icon:nth-child(5),
+  .float-icon:nth-child(6) {
+    display: none;
+  }
   .timeline-hero {
     padding: var(--space-8) var(--space-4);
     min-height: 50vh;
@@ -636,7 +743,6 @@
     padding: var(--space-2);
   }
 
-  /* MOBILE TIMELINE LAYOUT */
   .timeline-line {
     left: var(--space-6);
     width: var(--timeline-line-width-mobile);
@@ -657,13 +763,13 @@
     padding: var(--space-4);
   }
 
-  /* REMOVE DESKTOP ARROWS ON MOBILE */
+  /* Removendo setar desktop em mobile */
   .timeline-item.left .timeline-content::after,
   .timeline-item.right .timeline-content::after {
     display: none;
   }
 
-  /* MOBILE TIMELINE MARKERS */
+  /* Marcadores Mobile */
   .timeline-marker {
     left: var(--space-6);
     width: var(--timeline-marker-size-mobile);
@@ -716,8 +822,27 @@
   }
 }
 
-/* Small Devices (landscape phones, 481px to 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
+  .float-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .float-icon:nth-child(1) svg,
+  .float-icon:nth-child(4) svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .float-icon {
+    opacity: 0.1;
+  }
+
+  /* Reduzir alguns ícones em tablets */
+  .float-icon:nth-child(5),
+  .float-icon:nth-child(6) {
+    opacity: 0.08;
+  }
   .timeline-hero {
     padding: var(--space-12) var(--space-6);
   }
@@ -732,7 +857,6 @@
     padding: var(--space-4);
   }
 
-  /* TABLET TIMELINE LAYOUT */
   .timeline-line {
     left: var(--space-8);
   }
@@ -763,8 +887,10 @@
   }
 }
 
-/* Medium Devices (tablets, 769px to 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
+  .float-icon {
+    transition: transform 0.1s ease-out;
+  }
   .timeline-hero {
     padding: var(--space-16) var(--space-8);
   }
@@ -783,7 +909,6 @@
   }
 }
 
-/* Large Devices (desktops, 1025px and up) */
 @media (min-width: 1025px) {
   .timeline-hero {
     padding: var(--space-20) var(--space-8);
@@ -803,7 +928,7 @@
   }
 }
 
-/* ===== MODAL RESPONSIVITY ===== */
+/* Responsividade do Modal */
 .book-modal {
   position: fixed;
   top: 0;
@@ -817,12 +942,14 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-backdrop-filter: blur(0px);
   backdrop-filter: blur(0px);
 }
 
 .book-modal.show {
   opacity: 1;
   visibility: visible;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -933,7 +1060,7 @@
   margin-top: var(--space-1);
 }
 
-/* ===== ACCESSIBILITY & PERFORMANCE ===== */
+/* Acessibilidade e Perfomance */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -942,10 +1069,26 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  .float-icon {
+    animation: none;
+    opacity: 0.1;
+  }
+
+  .float-icon:hover {
+    animation: none;
+  }
 }
 
-/* High contrast mode */
+/* Modo de alto constraste */
 @media (prefers-contrast: high) {
+  .float-icon {
+    opacity: 0.4;
+    color: white;
+  }
+
+  .float-icon svg {
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.8));
+  }
   .timeline-content,
   .modal-content {
     border: 2px solid #000;
@@ -956,7 +1099,7 @@
   }
 }
 
-/* Print styles */
+/* Print Estilos */
 @media print {
   .timeline-hero,
   .expand-btn {
@@ -974,17 +1117,52 @@
   }
 }
 
-/* Focus styles for accessibility */
+/* Estilo de Foco para acessibilidade */
 .filter-btn:focus-visible,
 .expand-btn:focus-visible {
   outline: 3px solid var(--accent-color);
   outline-offset: 2px;
 }
 
-/* Performance optimizations */
+/* Otimizações de perfomance */
 .timeline-item,
 .timeline-marker {
   will-change: transform;
-  backface-visibility: hidden;
   transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+@keyframes floatAnimationReverse {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 0.15;
+  }
+  25% {
+    transform: translateY(10px) rotate(-3deg) scale(0.95);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(20px) rotate(2deg) scale(0.9);
+    opacity: 0.2;
+  }
+  75% {
+    transform: translateY(5px) rotate(-1deg) scale(0.98);
+    opacity: 0.22;
+  }
+}
+@keyframes floatPulse {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.15;
+  }
+  30% {
+    transform: translateY(-12px) scale(1.15);
+    opacity: 0.3;
+  }
+  60% {
+    transform: translateY(-8px) scale(1.05);
+    opacity: 0.25;
+  }
 }

@@ -233,7 +233,7 @@
   }
 }
 
-/* ===== MAP LOADING & ERROR STATES ===== */
+/*  MAP LOADING & ERROR STATES */
 .map-loading,
 .map-error {
   display: flex;
@@ -278,7 +278,7 @@
   transform: translateY(-2px);
 }
 
-/* ===== ENHANCED MARKERS ===== */
+/* ENHANCED MARKERS */
 .custom-marker {
   background: transparent;
   border: none;
@@ -327,7 +327,7 @@
   z-index: 2;
 }
 
-/* ===== ENHANCED POPUPS ===== */
+/* ENHANCED POPUPS */
 .custom-popup .leaflet-popup-content-wrapper {
   background: white;
   border-radius: 15px;
@@ -451,7 +451,7 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== ENHANCED SIDEBAR ===== */
+/* ENHANCED SIDEBAR */
 .book-detail-card {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   padding: 1.5rem;
@@ -572,7 +572,7 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== MAP STATS ===== */
+/* MAP STATS */
 .map-stats {
   text-align: center;
   padding: 1.5rem;
@@ -617,7 +617,7 @@
   font-style: italic;
 }
 
-/* ===== ANIMATIONS ===== */
+/* ANIMATIONS */
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -649,7 +649,7 @@
   }
 }
 
-/* ===== RESPONSIVE ENHANCEMENTS ===== */
+/* RESPONSIVE ENHANCEMENTS */
 @media (max-width: 768px) {
   .popup-title {
     font-size: 1rem;
