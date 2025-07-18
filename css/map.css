@@ -2,51 +2,48 @@
   margin-top: 80px;
   min-height: calc(100vh - 80px);
   background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
 }
 
+/* Hero Section Compacta */
 .map-hero {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 2rem 1rem;
   color: white;
+  flex-shrink: 0;
 }
 
 .map-hero h1 {
   font-family: "Playfair Display", serif;
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .map-hero p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   opacity: 0.9;
+  margin: 0;
 }
 
+/* Controles Simplificados */
 .map-controls {
   background: white;
-  padding: 1.5rem 2rem;
+  padding: 1rem;
   display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
 
-.control-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.control-group label {
-  font-weight: 600;
-  color: var(--primary-color);
-  font-size: 0.9rem;
-}
-
-.control-group select {
-  padding: 0.5rem 1rem;
+.map-controls select {
+  flex: 1;
+  max-width: 200px;
+  padding: 0.5rem;
   border: 2px solid #ddd;
   border-radius: 8px;
   background: white;
@@ -56,425 +53,153 @@
   transition: border-color 0.3s ease;
 }
 
-.control-group select:focus {
+.map-controls select:focus {
   outline: none;
   border-color: var(--secondary-color);
 }
 
+.toggle-sidebar {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.toggle-sidebar:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+}
+
+/* Container do Mapa Responsivo */
 .map-container {
+  flex: 1;
   display: flex;
-  height: 70vh;
-  background: white;
+  position: relative;
+  min-height: 0; /* Importante para flex */
 }
 
 #literaryMap {
   flex: 1;
-  min-height: 70vh;
+  min-height: 400px;
+  position: relative;
 }
 
+/* Sidebar Colapsável */
 .map-sidebar {
-  width: 350px;
+  width: 320px;
   background: white;
-  padding: 2rem;
   border-left: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1000;
+}
+
+.sidebar-header {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  flex-shrink: 0;
+}
+
+.sidebar-header h3 {
+  font-family: "Playfair Display", serif;
+  color: var(--primary-color);
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.close-sidebar {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.close-sidebar:hover {
+  background: #e9ecef;
+  color: var(--secondary-color);
+}
+
+.sidebar-content {
+  flex: 1;
+  padding: 1rem;
   overflow-y: auto;
 }
 
-.map-sidebar h3 {
-  font-family: "Playfair Display", serif;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--accent-color);
-  padding-bottom: 0.5rem;
-}
-
-#bookDetails {
-  color: var(--text-color);
-}
-
-.book-detail-card {
-  background: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 10px;
-  border-left: 4px solid var(--secondary-color);
-}
-
-.book-detail-card h4 {
-  font-family: "Playfair Display", serif;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.book-detail-card .author {
-  font-weight: 600;
-  color: var(--secondary-color);
-  margin-bottom: 0.5rem;
-}
-
-.book-detail-card .year {
-  background: var(--accent-color);
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  display: inline-block;
-  margin-bottom: 0.5rem;
-}
-
-.book-detail-card .country {
-  color: #666;
-  font-style: italic;
-}
-
-.map-legend {
-  background: white;
-  padding: 1.5rem 2rem;
-  border-top: 1px solid #ddd;
-}
-
-.map-legend h4 {
-  font-family: "Playfair Display", serif;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.legend-items {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.legend-marker {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 3px solid white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.legend-marker.main {
-  background: #e74c3c;
-}
-
-.legend-marker.vpln {
-  background: #3498db;
-}
-
-.legend-marker.opeca {
-  background: #2ecc71;
-}
-
-/* Estilos customizados para os popups do Leaflet */
-.custom-popup .leaflet-popup-content-wrapper {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-}
-
-.custom-popup .leaflet-popup-content {
-  margin: 1rem;
-  font-family: "Inter", sans-serif;
-}
-
-.popup-title {
-  font-family: "Playfair Display", serif;
-  font-size: 1.1rem;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.popup-author {
-  font-weight: 600;
-  color: var(--secondary-color);
-  margin-bottom: 0.25rem;
-}
-
-.popup-year {
-  background: var(--accent-color);
-  color: white;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  display: inline-block;
-}
-
-@media (max-width: 768px) {
-  .map-hero h1 {
-    font-size: 2rem;
-  }
-
-  .map-container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  #literaryMap {
-    height: 50vh;
-  }
-
-  .map-sidebar {
-    width: 100%;
-    max-height: 300px;
-  }
-
-  .map-controls {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .legend-items {
-    justify-content: center;
-  }
-}
-
-/*  MAP LOADING & ERROR STATES */
-.map-loading,
-.map-error {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 3rem;
+.welcome-message {
   text-align: center;
-  background: #f8f9fa;
+  color: #666;
+  padding: 2rem 1rem;
 }
 
-.loading-spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid var(--secondary-color);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+.welcome-message p {
   margin-bottom: 1rem;
-}
-
-.error-icon {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  opacity: 0.5;
-}
-
-.retry-btn {
-  background: var(--secondary-color);
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  cursor: pointer;
-  margin-top: 1rem;
-  transition: all 0.3s ease;
-}
-
-.retry-btn:hover {
-  background: #c0392b;
-  transform: translateY(-2px);
-}
-
-/* ENHANCED MARKERS */
-.custom-marker {
-  background: transparent;
-  border: none;
-}
-
-.marker-pin {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 3px solid white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.marker-pin:hover {
-  transform: scale(1.2);
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
-}
-
-.marker-pin.highlighted {
-  transform: scale(1.3);
-  box-shadow: 0 0 0 5px rgba(231, 76, 60, 0.3);
-  animation: pulse 2s infinite;
-}
-
-.marker-pulse {
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border-radius: 50%;
-  background: inherit;
-  opacity: 0.3;
-  animation: markerPulse 2s infinite;
-}
-
-.marker-icon {
-  font-size: 14px;
-  z-index: 2;
-}
-
-/* ENHANCED POPUPS */
-.custom-popup .leaflet-popup-content-wrapper {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border: none;
-  padding: 0;
-}
-
-.custom-popup .leaflet-popup-content {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  min-width: 250px;
-}
-
-.popup-header {
-  padding: 1rem 1rem 0.5rem;
-  border-bottom: 1px solid #eee;
-}
-
-.popup-title {
-  font-family: "Playfair Display", serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
-
-.popup-collections {
-  display: flex;
-  gap: 0.25rem;
-  flex-wrap: wrap;
-}
-
-.popup-collection {
-  padding: 0.2rem 0.5rem;
-  border-radius: 10px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.popup-collection.main {
-  background: #e74c3c;
-  color: white;
-}
-
-.popup-collection.vpln {
-  background: #3498db;
-  color: white;
-}
-
-.popup-collection.opeca {
-  background: #2ecc71;
-  color: white;
-}
-
-.popup-body {
-  padding: 0.5rem 1rem;
-}
-
-.popup-author,
-.popup-year,
-.popup-location,
-.popup-country {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.25rem;
   font-size: 0.9rem;
 }
 
-.popup-author {
-  font-weight: 600;
-  color: var(--secondary-color);
-}
-
-.popup-year {
-  color: var(--accent-color);
-  font-weight: 600;
-}
-
-.popup-location {
-  color: #666;
-  font-style: italic;
-}
-
-.popup-country {
-  color: #888;
-}
-
-.popup-icon {
-  font-size: 0.8rem;
-  width: 16px;
-  text-align: center;
-}
-
-.popup-footer {
-  padding: 0.5rem 1rem 1rem;
-  text-align: center;
-}
-
-.popup-btn {
-  background: linear-gradient(
-    45deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  transition: all 0.3s ease;
-}
-
-.popup-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* ENHANCED SIDEBAR */
+/* Informações do Livro Simplificadas */
 .book-detail-card {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   padding: 1.5rem;
-  border-radius: 15px;
+  border-radius: 12px;
   border-left: 4px solid var(--secondary-color);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
 }
 
-.detail-header {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
-}
-
-.detail-header h4 {
+.book-title {
   font-family: "Playfair Display", serif;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.3;
 }
 
-.detail-collections {
+.book-author {
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.book-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.meta-tag {
+  background: #e9ecef;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #495057;
+}
+
+.book-location {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.book-collections {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
@@ -504,167 +229,376 @@
   color: white;
 }
 
-.detail-body {
-  margin-bottom: 1rem;
-}
-
-.detail-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-  padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.7);
+/* Estatísticas Rápidas */
+.quick-stats {
+  background: #f8f9fa;
+  padding: 1rem;
   border-radius: 8px;
+  margin-top: 1rem;
 }
 
-.detail-icon {
-  font-size: 1rem;
-  width: 20px;
-  text-align: center;
-  margin-top: 0.1rem;
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
-.detail-row div {
-  flex: 1;
+.stats-row:last-child {
+  margin-bottom: 0;
 }
 
-.detail-row strong {
-  display: block;
-  color: var(--primary-color);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.25rem;
-}
-
-.detail-row span {
+.stats-label {
   color: #666;
-  font-size: 0.9rem;
 }
 
-.detail-actions {
-  text-align: center;
-  padding-top: 1rem;
-  border-top: 1px solid #eee;
+.stats-value {
+  font-weight: 600;
+  color: var(--primary-color);
 }
 
-.detail-btn {
-  background: linear-gradient(
-    45deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  display: inline-flex;
+/* Legenda Compacta */
+.map-legend {
+  background: white;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.legend-items {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: all 0.3s ease;
-}
-
-.detail-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* MAP STATS */
-.map-stats {
-  text-align: center;
-  padding: 1.5rem;
-}
-
-.map-stats h4 {
-  font-family: "Playfair Display", serif;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.stat-item {
-  text-align: center;
-}
-
-.stat-number {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--secondary-color);
-  margin-bottom: 0.25rem;
-}
-
-.stat-label {
-  font-size: 0.8rem;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.stats-description {
   font-size: 0.9rem;
+}
+
+.legend-marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.legend-marker.main {
+  background: #e74c3c;
+}
+
+.legend-marker.vpln {
+  background: #3498db;
+}
+
+.legend-marker.opeca {
+  background: #2ecc71;
+}
+
+/* Popups Simplificados */
+.custom-popup .leaflet-popup-content-wrapper {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: none;
+  padding: 0;
+}
+
+.custom-popup .leaflet-popup-content {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.popup-content {
+  padding: 1rem;
+}
+
+.popup-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.popup-author {
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.popup-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.popup-year {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.popup-location {
   color: #666;
-  line-height: 1.4;
+  font-size: 0.8rem;
   font-style: italic;
 }
 
-/* ANIMATIONS */
+/* Estados de Loading e Erro */
+.map-loading,
+.map-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.loading-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid var(--secondary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.retry-btn {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.retry-btn:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+}
+
+/* Marcadores Customizados */
+.custom-marker {
+  background: transparent;
+  border: none;
+}
+
+.marker-pin {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.marker-pin:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.marker-icon {
+  font-size: 12px;
+  z-index: 2;
+}
+
+/* Animações */
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes pulse {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
-  }
-}
-
-@keyframes markerPulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.3;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.1;
-  }
-  100% {
-    transform: scale(1.4);
-    opacity: 0;
-  }
-}
-
-/* RESPONSIVE ENHANCEMENTS */
+/* RESPONSIVIDADE OTIMIZADA */
 @media (max-width: 768px) {
-  .popup-title {
-    font-size: 1rem;
+  .map-main {
+    margin-top: 70px;
   }
 
-  .detail-row {
+  .map-hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .map-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .map-hero p {
+    font-size: 0.9rem;
+  }
+
+  .map-controls {
+    padding: 0.75rem;
     flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .map-controls select {
+    max-width: none;
+    width: 100%;
+  }
+
+  .toggle-sidebar {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  /* Mapa ocupa altura fixa em mobile */
+  .map-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #literaryMap {
+    height: 60vh; /* Altura fixa para permitir scroll */
+    min-height: 300px;
+    max-height: 400px;
+  }
+
+  /* Sidebar em mobile vira overlay */
+  .map-sidebar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    transform: translateY(100%);
+    background: white;
+    border: none;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .map-sidebar.open {
+    transform: translateY(20%);
+  }
+
+  .sidebar-header {
+    background: white;
+    border-bottom: 2px solid #eee;
+    padding: 1rem;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .close-sidebar {
+    display: block;
+  }
+
+  .legend-items {
+    gap: 1rem;
+  }
+
+  .legend-item {
+    font-size: 0.8rem;
+  }
+
+  /* Popups menores em mobile */
+  .custom-popup .leaflet-popup-content {
+    min-width: 180px;
+    max-width: 200px;
+  }
+
+  .popup-title {
+    font-size: 0.9rem;
+  }
+
+  .popup-author {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .map-hero p {
+    font-size: 0.8rem;
+  }
+
+  #literaryMap {
+    height: 50vh;
+    min-height: 250px;
+  }
+
+  .map-sidebar.open {
+    transform: translateY(30%);
+  }
+
+  .legend-items {
+    flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
   }
+}
 
-  .detail-icon {
-    align-self: flex-start;
+/* Estados da Sidebar */
+.sidebar-hidden {
+  transform: translateX(100%);
+}
+
+@media (min-width: 769px) {
+  .close-sidebar {
+    display: none;
   }
 
-  .stats-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .map-sidebar.sidebar-hidden {
+    transform: translateX(100%);
+  }
+}
+
+/* Overlay para mobile */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .sidebar-overlay.active {
+    display: block;
   }
 }

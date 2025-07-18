@@ -43,7 +43,7 @@
         <!-- Desktop Menu -->
         <ul class="nav-menu" id="navMenu">
           <li class="nav-item">
-            <a href="../index.html" class="nav-link active">Início</a>
+            <a href="../index.html" class="nav-link">Início</a>
           </li>
           <li class="nav-item">
             <a href="search.html" class="nav-link">Buscar Livros</a>
@@ -52,7 +52,7 @@
             <a href="timeline.html" class="nav-link">Timeline</a>
           </li>
           <li class="nav-item">
-            <a href="map.html" class="nav-link">Mapa Literário</a>
+            <a href="map.html" class="nav-link active">Mapa Literário</a>
           </li>
         </ul>
 
@@ -77,48 +77,57 @@
     </nav>
 
     <main class="map-main">
+      <!-- Hero Section Compacta -->
       <div class="map-hero">
-        <h1>Atlas Literário Mundial</h1>
-        <p>Descubra onde nasceram as histórias que tocaram nossos corações</p>
+        <h1>Atlas Literário</h1>
+        <p>Explore as origens das nossas leituras pelo mundo</p>
       </div>
 
+      <!-- Controles Simplificados -->
       <div class="map-controls">
-        <div class="control-group">
-          <label>Filtrar por categoria:</label>
-          <select id="categoryFilter" title="Filtrar por categoria">
-            <option value="all">Todas as categorias</option>
-            <option value="main">Clube Principal</option>
-            <option value="vpln">VPLN</option>
-            <option value="opeca">OPECA</option>
-          </select>
-        </div>
-        <div class="control-group">
-          <label>Período:</label>
-          <select id="periodFilter" title="Período">
-            <option value="all">Todos os períodos</option>
-            <option value="classic">Clássicos (até 1900)</option>
-            <option value="modern">Modernos (1900-1950)</option>
-            <option value="contemporary">Contemporâneos (1950+)</option>
-          </select>
-        </div>
+        <select id="categoryFilter" title="Filtrar por categoria">
+          <option value="all">📚 Todas as categorias</option>
+          <option value="main">🏆 Clube Principal</option>
+          <option value="vpln">💙 VPLN</option>
+          <option value="opeca">💚 OPECA</option>
+        </select>
+
+        <button
+          class="toggle-sidebar"
+          id="toggleSidebar"
+          title="Mostrar/Ocultar Informações"
+        >
+          ℹ️ Info
+        </button>
       </div>
 
+      <!-- Container do Mapa Responsivo -->
       <div class="map-container">
         <div id="literaryMap"></div>
+
+        <!-- Sidebar Colapsável -->
         <div class="map-sidebar" id="mapSidebar">
-          <h3>Informações do Livro</h3>
-          <div id="bookDetails">
-            <p>Clique em um marcador no mapa para ver detalhes do livro</p>
+          <div class="sidebar-header">
+            <h3>Detalhes</h3>
+            <button class="close-sidebar" id="closeSidebar" aria-label="Fechar">
+              ×
+            </button>
+          </div>
+          <div class="sidebar-content" id="bookDetails">
+            <div class="welcome-message">
+              <p>🗺️ Toque em um marcador para ver informações do livro</p>
+              <div class="quick-stats" id="quickStats"></div>
+            </div>
           </div>
         </div>
       </div>
 
+      <!-- Legenda Compacta -->
       <div class="map-legend">
-        <h4>Legenda</h4>
         <div class="legend-items">
           <div class="legend-item">
             <span class="legend-marker main"></span>
-            <span>Clube Principal</span>
+            <span>Principal</span>
           </div>
           <div class="legend-item">
             <span class="legend-marker vpln"></span>
